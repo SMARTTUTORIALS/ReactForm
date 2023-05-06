@@ -6,6 +6,12 @@ There are three servers that are required. These can run on the same machine in 
 2. backend (node & express)
 3. database (mongodb)
 
+## Installing dependencies
+
+1. Navigate inside the `reactform` folder in a terminal and run the command `npm install`
+
+This will install all the dependencies required for the application to run.
+
 ## To start the database server
 
 1. Install and configure monogodb on the system / a cloud database can also be used.
