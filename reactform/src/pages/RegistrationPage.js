@@ -100,7 +100,7 @@ const RegistrationPage = () => {
                         <div className="col-md-5 mt-2">
                             <div className="d-flex flex-row flex-nowrap">
                                 <label htmlFor="mobile" className="p-2">Mobile</label>
-                                <input {...register("mobile")} defaultValue={"NA"} type="tel" className="form-control w-75" id="mobile" placeholder="Enter Mobile"
+                                <input {...register("mobile")} type="tel" className="form-control w-75" id="mobile" placeholder="Enter Mobile"
                                     maxLength="13" size="20" />
                             </div>
                             {errors?.mobile && <p className='fs-6 text-danger text-end'>{errors?.mobile?.message}</p>}
@@ -108,7 +108,7 @@ const RegistrationPage = () => {
                         <div className="col-md-7 mt-2">
                             <div className="d-flex flex-row flex-nowrap">
                                 <label htmlFor="govtIdType" className="p-2 text-nowrap">Govt Issued ID</label>
-                                <select {...register("govtIdType")} defaultValue={"NA"} className="form-select w-25 me-2" id="govtIdType" name="govtIdType">
+                                <select {...register("govtIdType")} className="form-select w-25 me-2" id="govtIdType" name="govtIdType">
                                     <option value="NA">ID Type</option>
                                     <option value="Aadhar">Aadhar</option>
                                     <option value="PAN">PAN</option>
@@ -132,7 +132,7 @@ const RegistrationPage = () => {
                                     <option value="Mrs.">Mrs.</option>
 
                                 </select>
-                                <input {...register("guardianName")} defaultValue={"NA"} type="text" className="form-control" id="guardianName"
+                                <input {...register("guardianName")} type="text" className="form-control" id="guardianName"
                                     placeholder="Enter Guardian Name" />
 
                             </div>
@@ -140,13 +140,13 @@ const RegistrationPage = () => {
                         <div className="col-md-4 mt-2">
                             <div className="d-flex flex-row flex-nowrap">
                                 <label htmlFor="email" className="p-2 text-nowrap">Email</label>
-                                <input {...register("email")} defaultValue={"NA"} type="email" className="form-control" id="email" placeholder="Enter Email" />
+                                <input {...register("email")} type="email" className="form-control" id="email" placeholder="Enter Email" />
                             </div>
                         </div>
                         <div className="col-md-3 mt-2">
                             <div className="d-flex flex-row flex-nowrap">
                                 <label htmlFor="emergencyPhone" className="p-2">Emergency Contact Number</label>
-                                <input {...register("emergencyPhone")} defaultValue={"NA"} type="tel" className="form-control w-75" id="emergencyPhone" placeholder="Enter Emergency No"
+                                <input {...register("emergencyPhone")} type="tel" className="form-control w-75" id="emergencyPhone" placeholder="Enter Emergency No"
                                     maxLength="13" size="20" />
 
                             </div>
