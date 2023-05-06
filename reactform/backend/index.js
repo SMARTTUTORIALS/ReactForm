@@ -3,6 +3,8 @@ const express = require('express') //for building api endpoints
 const cors = require('cors') // to accept request from same doamin
 const mongoose = require('mongoose') // api for mongodb operations
 
+require('dotenv').config({ path: '../.env'});  // use the environment variable
+
 //initailize express app
 const app = express();
 app.use(cors());
@@ -11,6 +13,7 @@ app.use(express.json());
 //count the number of requests received.
 let reqID = 1;
 
+const connectionString = `${process.env.DB_CONNECTION_STRING}/RegistrationData`;
 
 //define the schema of what data will be stored.
 const Schema = mongoose.Schema;
@@ -43,7 +46,7 @@ const userModel = mongoose.model('users', userSchema);
 
 //function to initialize connection to database
 async function main() {
-    await mongoose.connect('mongodb://localhost:27017/RegistrationData');
+    await mongoose.connect(connectionString);
 }
 
 //initialize database connection and show error if failed.
