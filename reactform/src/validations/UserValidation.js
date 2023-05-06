@@ -5,7 +5,7 @@ import * as yup from 'yup'
 export const userSchema = yup.object().shape({
     username: yup.string().required("This field is required"),
     age: yup.string().required("This field is required")    //match for requied field and date or age format
-    .matches(/((([0-2][0-9]|30|31)\/((0[13456789])|(1[0-2]))\/([0-9]{4}))|(([0-2][0-9])\/(02)\/([0-9]{4})))|(\d+)/,{
+    .matches(/((([0-2][0-9]|30|31)\/((0[13456789])|(1[0-2]))\/([0-9]{4}))|(([0-2][0-9])\/(02)\/([0-9]{4})))|(^\d+$)/,{
         message:"Enter your DOB in DD/MM/YYYY format or Age in Years",
     }),
     gender: yup.string().required("Please select a valid option"),
